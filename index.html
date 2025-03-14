@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant</title>
+        <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+}
+
+body {
+    background: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.foto {
+    font-weight: 800;
+    color: black;
+    font-size: 24px;
+    margin-left: 0.5rem;
+    font-size: 1.728rem;
+}
+
+.gency {
+    font-weight: 100;
+    font-size: 1.728rem;
+    color: black;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
+
+.contact-now {
+    font-size: 17px;
+    font-weight: bolder;
+    color: #F59E0B; 
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    right: 160px; 
+    top: 28px;
+}
+
+.contact-now:hover{
+    text-decoration: underline;
+    transition: ease-out;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    position: absolute;
+    right: 73px;
+    top: 28px;
+    text-align: right;
+    z-index: 10;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    transition: color 0.3s, font-weight 0.3s; 
+}
+.menu ul li a:hover {
+    color: black;
+    font-weight: 100;
+}
+
+.menu ul li a.active {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+}
+.menu ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 101%; 
+    top: 50%; 
+    width: 30px; 
+    height: 2px; 
+    background-color: #F59E0B; 
+    transform: translateY(-50%); 
+    font-weight: bolder;   
+}
+.hero {
+    display: flex;
+    width:89%;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+    margin: 0px 20.4px ;
+    padding: 0px 48px;
+    top: 35px;  
+}
+.outlined-title {
+   display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    -webkit-text-stroke: 1px #8e8e8e;
+    -webkit-text-stroke-width: 0.3px; 
+    position: relative;
+    top: -45px;    
+}
+.main-heading {
+    font-size: 3.7rem; 
+    width: 60%;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: none;
+    color: black;
+    
+}
+.thin-text {
+    font-weight:normal;
+    color: gray; 
+}
+.bold-text {
+    
+    font-weight: bold;
+    color: #6E6E6E;
+}
+
+.container1 {
+    display: flex;
+ 
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    gap:5px;   
+}
+.imagep1 {
+    display: flex;
+    width:3%;
+    
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-lr; /* Rotates text vertically from right to left */
+    transform: rotate(0deg); /* Adjusts orientation */
+    font-size:1rem; /* Adjust size if needed */
+    font-weight: bold;
+    color: orange;
+    margin-right: 35px;
+    margin-bottom: 2.5px;
+    cursor: pointer;
+}
+.imagep1::after {
+    content: "↓"; 
+    font-size: 3rem; 
+    writing-mode: vertical-lr; 
+    transform: rotate(-90deg); 
+    display: block; 
+    text-align: center;
+}
+.left-img{
+    display: flex;
+    width: 26%;
+    height: 70vh;
+    align-items: flex-end;
+}
+.imgl{
+    width:60%;
+    height: auto;
+    margin-left: 60px;
+}
+.right-img  {
+    display: flex;
+    justify-content: flex-end;
+    width:20%;
+    height: 70vh;   
+}
+.imgr{
+    width: 73%;
+    height: 20vh;
+    margin-right: 50px;
+    margin-top: 13px;
+    position: relative;
+    top: -43px;
+}
+.main-img {
+    display: flex;
+    width: 54%;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    gap:100px;
+    justify-content: flex-start;
+    
+}
+.imgm{
+    width:100%;
+    height:auto;
+    position: relative;
+    top: -35px;
+   
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: transparent; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.circle1 {
+    width: 150px; 
+    height: 150px;
+    top: -46px; 
+    left: 455px; /
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    bottom: 200px;  
+    right: 235px; 
+}
+
+.para{
+    display: flex;
+   
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+.p1{
+    display: flex;
+    font-size: 25px;
+    color:gray;
+    margin-top:10px;
+}
+.p2{
+    color: grey;
+    margin-bottom: 20px;
+}
+    </style>
+        
+  
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img width="26px" height="27px"
+                            src="https://photography-portfolio07.netlify.app/assets/img/icons/logo-icon.png" alt="Logo">
+                        <span class="foto">Foto</span><span class="gency">gency</span>
+                    </a>
+                </div>
+                <a class="contact-now" href="/blog#contact">CONTACT NOW</a>
+                
+                
+                <div class="menu">
+                    <ul>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="/portfolio" >Portfolio</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/exhibitions">Exhibitions</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <header class="hero">
+                <h1 class="main-heading">
+                    Fotogency <span class="thin-text">deals with first <br>class </span>
+                    <span class="bold-text">photography orphan<br> services.</span>
+                </h1>
+                <h1 class="outlined-title">HOME</h1>
+            </header>
+        </div>
+        <div class="main">
+            
+            <div class="container1">
+                <div class="left-img">
+                    <img class="imgl" src="https://photography-portfolio07.netlify.app/assets/img/home/img2.png" alt="Left Image">
+                </div>
+                <p class="imagep1">SCROLL </p>
+                <div class="main-img">
+                    
+                    <img class="imgm" src="https://photography-portfolio07.netlify.app/assets/img/home/img1.png" alt="Main Image">
+                    <div class="circle circle1"></div>
+                    <div class="circle circle2"></div> 
+                    <div class="para">
+                        <p class="p1"><b>There are many variations of passages of Lorem Ipsum available, but the majority</b></p>
+                        <p class="p2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                        
+                    </div>  
+                    
+                </div>
+                <div class="right-img">
+                    <img  class="imgr" src="https://photography-portfolio07.netlify.app/assets/img/home/img3.png" alt="Right Image">
+             </div>       
+            
+            
+        </div>
+       
+            
+        </div>
+    </body>
+</html>
