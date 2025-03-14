@@ -315,6 +315,12 @@ body {
                     <img class="imgl" src="https://photography-portfolio07.netlify.app/assets/img/home/img2.png" alt="Left Image">
                 </div>
                 <p class="imagep1">SCROLL </p>
+                <script>
+                     document.querySelector(".imagep1").addEventListener("click", function () {
+                     document.querySelector(".main-img").scrollIntoView({ behavior: "smooth" });
+                 });
+                </script>
+                
                 <div class="main-img">
                     
                     <img class="imgm" src="https://photography-portfolio07.netlify.app/assets/img/home/img1.png" alt="Main Image">
