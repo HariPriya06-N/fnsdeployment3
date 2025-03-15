@@ -482,6 +482,51 @@ margin-left: 40px;
       border-radius: 10px;
     
     }
+   .team {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    }
+    .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 25rem;
+            height: 24rem;
+            object-fit: cover;
+        }
+        .team-member h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        .team-member p {
+            color: #FFA500;
+        }
+        .social-icons a {
+            margin: 0 0.5rem;
+            color: #4A4A4A;
+        }
+        .social-icons a:hover {
+            color: #FFA500;
+        }
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+        .md\\:grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .md\\:grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-center {
+            text-align: center ;
+        }
     
    
   
