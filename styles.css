@@ -614,7 +614,366 @@ color: #8E8E8E;
             margin-top: 9px;
     
         }
+ body {
+            font-family: Arial, sans-serif;
+            
+            justify-content: center;
+            align-items: center;
+            height: 82vh;
+            background-color: #fff;
+        }
+        .contact-container {
+            width: 90%;
+            position: relative;
+        }
 
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 80px;
+            margin-bottom: 100px;
+        }
+        
+        
+        .left,
+        .right {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           
+        }
+
+        .left input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .right textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+            resize: vertical; 
+            height: 197px; 
+        }
+
+        .right input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="date"] {
+            position: relative;
+            color: transparent;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input[type="date"]::before {
+            content: "Desired Date";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        input[type="date"]:focus,
+        input[type="date"]:valid {
+            color: black;
+        }
+
+        input[type="date"]:focus::before,
+        input[type="date"]:valid::before {
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .submit-btn button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: orange;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .submit-btn button::after {
+            content: " →";
+            margin-left: 10px;
+            font-weight: 800;
+            color: #F59300;
+            transition: margin-left 0.3s ease;
+        }
+
+        .submit-btn button:hover::after {
+            margin-left: 15px;
+        }
+
+        .submit-btn button:hover {
+            border-bottom: 2px solid orange;
+        }
+
+        .contact-title {
+    font-size: 4.2rem ;
+    font-weight: 800;
+    color: #8e8e8e;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    left: 20px;
+    margin-top: -3px;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+}
+.outline{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    opacity: 1;
+    -webkit-text-stroke: 1px #8e8e8e;
+    -webkit-text-stroke-width: 0.3px;
+    display: block;
+    z-index: -1;
+    line-height: 1;
+    margin-top: -1.5rem;
+    letter-spacing: 2px;
+}
+.heading{
+    margin-left: 35%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.left input:hover,
+.right input:hover {
+    border-bottom: 1px solid darkorange;
+}
+
+.left input,
+.right input {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.left input::placeholder,
+.right input::placeholder {
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.left input:focus::placeholder,
+.right input:focus::placeholder {
+    font-size: 12px;
+    top: 5px;
+    transform: translateY(0);
+}
+
+.right textarea {
+    border: 1px solid gray;
+    resize: vertical;
+}
+
+
+    .blog-section {
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      margin-top: 50px;
+      margin-left: 60px;
+      margin-right: 60px;
+      gap: 30px;
+    }
+
+    .blog-para {
+      color: #8E8E8E;
+      margin-top: 0px;
+      font-size: 15px;
+      margin-left: 6px;
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI";
+
+    }
+
+    .blog-para1 {
+      color: white;
+      margin-left: 198px;
+      font-size: 17px;
+      margin-top: 0px;
+      width: 130px;
+      background-color: rgba(255, 166, 0, 0.53);
+      font-family: "Open Sans", -apple-system, BlinkM;
+      text-align: center;
+      height: 30px;
+
+    }
+
+    .blog-img1 {
+      margin-bottom: 0px;
+      gap: 0px;
+
+    }
+
+    .blog-desc {
+      display: flex;
+    }
+
+    .circle {
+      color: orange;
+
+    }
+
+    .blog-heading {
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .blog-dummy-section {
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      margin-left: 60px;
+    }
+
+    .side-heading {
+      color: #8E8E8E;
+      font-weight: 700;
+
+    }
+
+    .by {
+      color: rgb(196, 196, 196);
+      
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .c1 {
+      color: rgba(128, 128, 128, 0.892);
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-weight: 700;
+    }
+
+    .p1 {
+      color: rgba(91, 112, 117, 0.914);
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 16px;
+      margin-right: 50px;
+
+    }
+
+    .blog-article {
+      color: rgb(245, 147, 0);
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+
+    .blog-article:hover {
+      text-decoration: underline;
+      transition: transform 0.3s ease-in-out;
+    }
+    .blog-arrow1{
+      width: 35px;
+      height: 20px;
+    
+      margin-left: 10px;
+      margin-top: 33px;
+      
+    }
+    .blog-button1{
+      display: inline-flex;
+      gap: 10px;
+      border:2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3 ease;
+      
+      box-sizing: border-box;
+      height: fit-content;
+      width: fit-content;
+    }
+    .blog-button1:active{
+      border: 4px solid lightblue;
+      border-radius: 10px;
+     
+    }
+    
+    .blog-button2{
+      display: inline-flex;
+      gap: 10px;
+      border:2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3 ease;
+      
+      box-sizing: border-box;
+      height: fit-content;
+      width: fit-content;
+    }
+    .blog-button2:active{
+      border: 4px solid lightblue;
+      border-radius: 10px;
+     
+    }
+    .blog-button3{
+      display: inline-flex;
+      gap: 10px;
+      border:2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3 ease;
+      box-sizing: border-box;
+      height: fit-content;
+      width: fit-content;
+    }
+    .blog-button3:active{
+      border: 4px solid lightblue;
+      border-radius: 10px;
+    }
+    .blog-para-article:hover{
+      text-decoration: underline;
+      color:#F59300;
+
+    }
+    
+    
+   
+   
 
 
 
