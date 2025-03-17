@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exhibition</title>
-
     <style>
         * {
             margin: 0;
@@ -16,6 +15,7 @@
 
         body {
             background: #fff;
+
         }
 
         .navbar {
@@ -24,6 +24,7 @@
             align-items: center;
             padding: 12px 50px;
             background: transparent;
+            width: 80%;
         }
 
         .container {
@@ -113,7 +114,7 @@
             position: absolute;
             left: 110%;
             top: 50%;
-            width: 100%;
+            width: 70%;
             height: 2px;
             background-color: #F59E0B;
             transform: translateY(-50%);
@@ -176,89 +177,48 @@
         .slideshow {
             position: relative;
             width: 100%;
-            max-width: 1400px;
+
             margin-top: 80px;
-            margin-left: 70px;
+
             overflow: hidden;
-            margin-right: 30px;
-
-        }
-
-        .slides {
-            display: flex;
-            width: 400%;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .slide {
-            width: 50%;
-            display: flex;
-
-        }
-
-
-        .ex-nav {
-            text-align: start;
-            margin-left: 70px;
-            margin-top: 25px;
-            margin-bottom: 30px;
-            font-size: 0;
-
-        }
-
-        .ex-nav label:active {
-            background: orange;
-
-        }
-
-        .ex-nav label:hover {
-            background: orange;
-        }
-
-
-
-        .ex-nav label {
-            width: 40px;
-            display: inline-block;
-            background: rgba(255, 166, 0, 0.166);
-            border: 2px solid rgba(255, 166, 0, 0.099);
-            cursor: pointer;
-            transition: 0.3;
-
-        }
-
-        #slide1,#slide2,#slide3,#slide4{
-            display: none;
-        }
-
-        #slide1:checked~.slideshow .slides {
-            transform: translateX(0);
-        }
-
-        #slide2:checked~.slideshow .slides {
-            transform: translateX(-25%);
-        }
-
-        #slide3:checked~.slideshow .slides {
-            transform: translateX(-50%);
-        }
-
-        #slide4:checked~.slideshow .slides {
-            transform: translateX(-75%);
-        }
-
-
-        .img-exh {
-            width: 460px;
-            height: 580px;
+            padding: 0;
 
 
         }
 
         .exh-img-container {
+            margin-left: 40px;
+        }
+
+        .slides {
+            display: flex;
             width: 100%;
-            margin-left: 30px;
-            margin-top: 80px;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+
+        }
+
+        .slide {
+            width: 80%;
+            display: flex;
+            flex: 0 0 100%;
+            align-items: center;
+            scroll-snap-align: center;
+            padding: 0 5%;
+
+
+        }
+
+        .slides::-webkit-scrollbar {
+            display: none;
+        }
+
+        .img-exh {
+            width: 460px;
+            height: 580px;
+
 
 
         }
@@ -319,18 +279,43 @@
         .exh-img2 {
             width: 200px;
             height: 580px;
-            margin-left: 200px;
+            margin-left: 220px;
             opacity: 0.5;
         }
 
         .border-dashed-bottom {
             border-bottom: 1px dashed gray;
-            width: 100%;
+            width: 80%;
             top: 3%;
             opacity: 0.25;
             color: black;
             position: absolute;
             z-index: 2;
+        }
+
+        .button1 {
+            position: absolute;
+            display: flex;
+            margin-top: 50px;
+            margin-left: 74px;
+
+        }
+
+
+        .button1 a {
+            background-color: rgba(255, 166, 0, 0.482);
+            width: 45px;
+            height: 4px;
+            margin: 0;
+            display: inline-block;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+
+        .button1 a:hover,
+        .button1 a:active {
+            background-color: darkorange;
         }
 
         .year {
@@ -341,30 +326,11 @@
             margin-left: 50px;
             color: white;
             font-weight: 700;
+            transform: translateX(-50%);
 
         }
 
         .rounded-circle {
-            border-radius: 50%;
-            background-color: white;
-            padding: 9px;
-            margin-right: 10px;
-            display: block;
-            margin-left: 10px;
-        }
-
-        .year1 {
-            position: absolute;
-            top: 2%;
-            display: block;
-            align-items: center;
-            margin-left: 240px;
-            color: white;
-            font-weight: 700;
-
-        }
-
-        .rounded-circle1 {
             border-radius: 50%;
             background-color: white;
             padding: 9px;
@@ -413,6 +379,7 @@
 
         .footer-left {
             font-size: 1rem;
+            margin-right: 20px;
         }
 
         .footer-logo {
@@ -421,6 +388,7 @@
             width: 10%;
             height: auto;
             margin-bottom: 7%;
+            margin-left: 30px;
 
         }
 
@@ -461,7 +429,7 @@
             margin-bottom: 20px;
         }
 
-        .newsletter input{
+        .newsletter input {
             width: 100%;
             padding: 8px;
             border: none;
@@ -523,7 +491,6 @@
 </head>
 
 <body>
-      
     <nav class="navbar">
         <div class="container">
             <div class="logo">
@@ -555,18 +522,12 @@
             <h1 class="outlined-title">Online & Offline</h1>
         </header>
     </div>
-    
-        <input  type="radio" name="slides" id="slide1" checked>
-        <input  type="radio" name="slides" id="slide2">
-        <input  type="radio" name="slides" id="slide3">
-        <input  type="radio" name="slides" id="slide4">
-    
-   
+
 
     <div class="slideshow">
         <div class="slides">
 
-            <div class="slide">
+            <div class="slide" id="exslide1">
                 <div class=" border-dashed-bottom "></div>
                 <img src="https://photography-portfolio07.netlify.app/assets/img/exhibitions/img01.png" class="img-exh">
                 <div class="year"><span class="rounded-circle"></span><span class="text-white fw-bold">2017</span></div>
@@ -582,17 +543,14 @@
                         <span class="fw-bolder">Details </span>
                         <img class="ex-ms-3"
                             src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png"
-                            width="50px" alt="" /></button>
-
+                            width="50px" alt="" />
                     </button>
                 </div>
                 <div class="exh-imgs">
                     <img src="exh-img2.png" class="exh-img2">
-                    <div class="year1"><span class="rounded-circle1"></span><span
-                            class="text-white1 fw-bold1">2015</span></div>
                 </div>
             </div>
-           <div class="slide">
+            <div class="slide" id="exslide2">
                 <div class=" border-dashed-bottom "></div>
                 <img src="https://photography-portfolio07.netlify.app/assets/img/exhibitions/img02.png" class="img-exh">
                 <div class="year"><span class="rounded-circle"></span><span class="text-white fw-bold">2015</span></div>
@@ -608,23 +566,16 @@
                         <span class="fw-bolder">Details </span>
                         <img class="ex-ms-3"
                             src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png"
-                            width="50px" alt="" /></button>
-
+                            width="50px" alt="" />
                     </button>
                 </div>
                 <div class="exh-imgs">
                     <img src="exh-img3.png" class="exh-img2">
-                    <div class="year1"><span class="rounded-circle1"></span><span
-                            class="text-white1 fw-bold1">2015</span></div>
                 </div>
-
             </div>
-
-
-            <div class="slide">
+            <div class="slide" id="exslide3">
                 <div class=" border-dashed-bottom "></div>
                 <img src="https://photography-portfolio07.netlify.app/assets/img/exhibitions/img03.png" class="img-exh">
-                <div class="year"><span class="rounded-circle"></span><span class="text-white fw-bold">2015</span></div>
                 <div class="exh-img-container">
                     <h2 class="exh-img-head">Through the Eyes of Kubrick</h2>
                     <h3 class="exh-h3">Individual</h3>
@@ -637,20 +588,16 @@
                         <span class="fw-bolder">Details </span>
                         <img class="ex-ms-3"
                             src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png"
-                            width="50px" alt="" /></button>
-
+                            width="50px" alt="" />
                     </button>
                 </div>
                 <div class="exh-imgs">
                     <img src="exh-img4.png" class="exh-img2">
-                    <div class="year1"><span class="rounded-circle1"></span><span
-                            class="text-white1 fw-bold1">2015</span></div>
                 </div>
             </div>
-            <div class="slide">
+            <div class="slide" id="exslide4">
                 <div class=" border-dashed-bottom "></div>
                 <img src="https://photography-portfolio07.netlify.app/assets/img/exhibitions/img04.png" class="img-exh">
-                <div class="year"><span class="rounded-circle"></span><span class="text-white fw-bold">2015</span></div>
                 <div class="exh-img-container">
                     <h2 class="exh-img-head">Through the Eyes of Kubrick</h2>
                     <h3 class="exh-h3">Individual</h3>
@@ -663,23 +610,20 @@
                         <span class="fw-bolder">Details </span>
                         <img class="ex-ms-3"
                             src="https://photography-portfolio07.netlify.app/assets/img/icons/long-arrow.png"
-                            width="50px" alt="" /></button>
-
+                            width="50px" alt="" />
                     </button>
                 </div>
                 <div class="exh-imgs">
                     <img src="exh-img5.png" class="exh-img2">
-                    <div class="year1"><span class="rounded-circle1"></span><span
-                            class="text-white1 fw-bold1">2017</span></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="ex-nav">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
+    <div class="button1">
+        <a href="#exslide1"></a>
+        <a href="#exslide2"></a>
+        <a href="#exslide3"></a>
+        <a href="#exslide4"></a>
     </div>
     <footer>
         <div class="footer1">
@@ -700,7 +644,7 @@
                 <div class="footer-right">
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
                     <div class="newsletter">
-                        <input  type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" />
                         <button>
                             <span>&rarr;</span>
                         </button>
